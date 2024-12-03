@@ -51,7 +51,7 @@ public class ClienteService {
 
             return clienteRepository.save(clienteExiste);
         } else{
-            throw new NoSuchElementException("Produto não encontrado");
+            throw new NoSuchElementException("Cliente não encontrado");
         }
     }
 
@@ -62,7 +62,7 @@ public class ClienteService {
             clienteRepository.delete(clienteExiste);
             return ResponseEntity.status(HttpStatus.ACCEPTED).body("Cliente excluido com sucesso!");
         } else{
-            throw new NoSuchElementException("Produto não encontrado");
+            throw new NoSuchElementException("Cliente não encontrado");
         }
     }
 
